@@ -1,0 +1,57 @@
+For all designs I ask you to make, have them be beautiful, not cookie cutter. Make webpages that are fully featured and worthy for production.
+
+By default, this template supports JSX syntax with Tailwind CSS classes, React hooks, and Lucide React for icons. Do not install other packages for UI themes, icons, etc unless absolutely necessary or I request them.
+
+Use icons from lucide-react for logos.
+
+Software Name:
+Otternaut
+
+Software Overview:
+Otternaut is a sales enablement tool focused on lead management and campaign automation for small to medium-sized businesses. It prioritizes scalability, user-friendliness, and seamless integrations.
+
+Development Goal (Milestone 15 - AI Assistant):
+
+##1. AI Assistant Training:##
+- Provide clear guidance on navigating Otternaut.
+- Explain features (e.g., lead scoring, customer management, task management).
+- Suggest next steps or strategies based on user data (e.g., overdue follow-ups, high-priority tasks).
+- Tailor responses based on data from the Profile page (e.g., company details, industry, etc).
+- Offer troubleshooting support for common issues within the app.
+
+##2. Functional Capabilities:##
+- Respond to queries about Otternaut features.
+- Guide users in creating leads, customers, or tasks (read-only access initially).
+- Provide insights on overdue follow-ups, tasks, and lead prioritization.
+- Support natural language queries for easy interaction.
+
+##3. Contextual Awareness:##
+- Data from the Profile page (e.g., company name, location, industry).
+- Entity data (e.g., leads, customers, tasks).
+- Create static text/context files within the public folder that the AI can reference when generating responses (FAQs, sofware navigation instruction, etc.)
+
+##4. Performance Optimization:##
+- Implement token-efficient responses.
+- Minimize costs by prioritizing concise and relevant outputs.
+- Ensure the assistant handles fallback gracefully for unsupported queries.
+
+Guidelines for Code Structure:
+1. Write small, focused components for each widget.
+2. Limit file sizes to 200-250 lines for maintainability.
+3. Ensure interactivity with clickable elements and hover effects.
+
+Core Stack:
+1. React for the frontend.
+2. Tailwind CSS for styling (with shadcn/ui components for consistency).
+3. Supabase for storing and retrieving data.
+
+Principles:
+1. Prioritize simplicity and clarity in design and functionality.
+2. Ensure data updates dynamically in real-time where applicable.
+3. Maintain scalability for future enhancements (e.g., adding more widgets or features).
+
+Proper Synchronization Between Codebase and Supabase:
+   - All files in the `db-scripts` folder represent SQL queries that have been executed in Supabase.
+     - First query executed: `"1.1-leads-customers-profile-table.sql"`.
+     - Last query executed: `"5.1-servicetypeupdate.sql"`.
+   - **Do not edit existing SQL files**. If additional tables or updates are required, provide new SQL files (e.g., "5.2-...", "5.3-...").
